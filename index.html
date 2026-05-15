@@ -1,10 +1,94 @@
-<!-- Professional Navigatsiya Paneli -->
-<nav>
-    <div class="logo">UR<span>TT</span></div>
-    <ul class="nav-links">
-        <li><a href="#home">Bosh sahifa</a></li>
-        <li><a href="#programs">Yo'nalishlar</a></li>
-        <li><a href="#about">Biz haqimizda</a></li>
-    </ul>
-    <a href="#telegram-form" class="nav-btn">Qabul 2026</a>
-</nav>
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urganch raqamli texnologiyalar texnikumi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigatsiya (Navbar) -->
+    <nav>
+        <div class="logo">UR<span>TT</span></div>
+        <ul class="nav-links">
+            <li><a href="#home">Bosh sahifa</a></li>
+            <li><a href="#programs">Yo'nalishlar</a></li>
+            <li><a href="#news">Yangiliklar</a></li>
+            <li><a href="#contact">Aloqa</a></li>
+        </ul>
+        <a href="#contact" class="nav-btn">Qabul 2026</a>
+    </nav>
+
+    <!-- Asosiy Hero qismi -->
+    <section class="hero" id="home">
+        <h1>Urganch raqamli texnologiyalar texnikumi</h1>
+        <p>Kelajakning eng zamonaviy va yuqori daromadli IT kasblarini biz bilan birga professional tarzda o'rganing.</p>
+        <a href="#contact" class="cta-main">Hoziroq ariza topshirish</a>
+    </section>
+
+    <!-- O'quv yo'nalishlari (Bento Grid) -->
+    <section class="programs-section" id="programs">
+        <h2 class="section-title">Bizning Yo'nalishlarimiz</h2>
+        <div class="bento-grid">
+            <div class="bento-card large">
+                <div class="card-icon">💻</div>
+                <h3>Dasturlash muhandisligi</h3>
+                <p>Python, JavaScript, ma'lumotlar bazasi va yirik dasturiy ta'minotlarni noldan mukammal yaratish tizimi.</p>
+                <span class="card-tag">Top yo'nalish</span>
+            </div>
+            <div class="bento-card">
+                <div class="card-icon">🌐</div>
+                <h3>Veb-texnologiyalar</h3>
+                <p>Zamonaviy, tezkor va interaktiv veb-saytlar hamda murakkab web-ilovalarni mukammal darajada dasturlash.</p>
+            </div>
+            <div class="bento-card">
+                <div class="card-icon">🎨</div>
+                <h3>Kompyuter grafikasi</h3>
+                <p>UI/UX dizayn, 3D modellashtirish, brending va raqamli vizual san'at loyihalarini tayyorlash sirlari.</p>
+            </div>
+            <div class="bento-card wide">
+                <div class="card-icon">🛡️</div>
+                <h3>Kiberxavfsizlik va Tarmoqlar</h3>
+                <p>Tizimlarni kiberhujumlardan himoya qilish, xavfsizlik protokollari va server boshqaruvini o'rganish.</p>
+                <span class="card-tag">Yangi</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Yangiliklar va Tadbirlar bo'limi -->
+    <section class="news-section" id="news">
+        <h2 class="section-title">So'nggi Yangiliklar</h2>
+        <div class="news-grid">
+            <div class="news-card">
+                <div class="news-date">15-May, 2026</div>
+                <h3>IT-Marafoni o'tkazildi</h3>
+                <p>Texnikum talabalari o'rtasida katta sovrinli dasturlash bo'yicha marafon g'oliblari aniqlandi.</p>
+            </div>
+            <div class="news-card">
+                <div class="news-date">10-May, 2026</div>
+                <h3>Yangi hamkorlik shartnomasi</h3>
+                <p>Texnikum va IT-Park Xorazm filiali o'rtasida talabalarni amaliyotga joylashtirish bo'yicha kelishuv imzolandi.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Telegram Botga ulanuvchi Aloqa formasi -->
+    <section class="contact-section" id="contact">
+        <h2 class="section-title">Hoziroq ro'yxatdan o'ting</h2>
+        <p style="color: #8892B0; margin-bottom: 30px;">Ma'lumotlaringizni qoldiring, tez orada operatorlarimiz siz bilan bog'lanishadi.</p>
+        <form id="telegram-form">
+            <input type="text" id="userName" placeholder="To'liq ismingiz" required>
+            <input type="tel" id="userPhone" placeholder="Telefon raqamingiz" required>
+            <button type="submit">Arizani yuborish</button>
+        </form>
+    </section>
+
+    <!-- Footer qismi -->
+    <footer>
+        <p>&copy; 2026 Urganch raqamli texnologiyalar texnikumi. Barcha huquqlar himoyalangan.</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
