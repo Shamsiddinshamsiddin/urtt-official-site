@@ -1,129 +1,74 @@
-/* 1. Global Sozlamalar va Shriftlar */
-@import url('https://googleapis.com');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
-}
-
-body {
-    background-color: #0A192F; /* To'q ko'k kiber fon */
-    color: #E6F1FF;
-    overflow-x: hidden;
-}
-
-h1, h2, h3 {
-    font-family: 'Space Grotesk', sans-serif;
-}
-
-/* 2. Navigatsiya paneli (Glassmorphism) */
+/* Navbar Mukammal Stillari */
 nav {
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 8%;
-    background: rgba(10, 25, 47, 0.85);
-    backdrop-filter: blur(10px);
+    background: rgba(10, 25, 47, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     z-index: 1000;
     border-bottom: 1px solid rgba(100, 255, 218, 0.1);
 }
 
 .logo {
-    font-size: 24px;
+    font-size: 26px;
     font-weight: 800;
-    color: #64FFDA; /* Neon feruza rang */
+    color: #FFFFFF;
+    letter-spacing: 1px;
 }
 
-/* 3. Hero Bo'limi */
-.hero {
-    min-height: 100vh;
+.logo span {
+    color: #64FFDA;
+}
+
+.nav-links {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 0 10%;
-    margin-top: 60px;
+    list-style: none;
+    gap: 35px;
 }
 
-.hero h1 {
-    font-size: 3.5rem;
-    color: #FFFFFF;
-    margin-bottom: 20px;
-    line-height: 1.2;
-}
-
-.hero p {
-    font-size: 1.2rem;
+.nav-links a {
     color: #8892B0;
-    max-width: 600px;
-    margin-bottom: 40px;
-}
-
-/* 4. Forma va Tugmalar (Sizning Telegram Formangiz) */
-form {
-    background: rgba(17, 34, 64, 0.6);
-    padding: 40px;
-    border-radius: 16px;
-    border: 1px solid rgba(100, 255, 218, 0.2);
-    width: 100%;
-    max-width: 450px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-}
-
-form input {
-    width: 100%;
-    padding: 14px 20px;
-    margin-bottom: 20px;
-    background: #112240;
-    border: 1px solid #233554;
-    border-radius: 8px;
-    color: #FFFFFF;
+    text-decoration: none;
     font-size: 1rem;
-    transition: 0.3s ease;
+    font-weight: 500;
+    transition: color 0.3s ease;
 }
 
-form input:focus {
-    outline: none;
-    border-color: #64FFDA;
-    box-shadow: 0 0 10px rgba(100, 255, 218, 0.2);
+.nav-links a:hover {
+    color: #64FFDA;
 }
 
-form button {
-    width: 100%;
-    padding: 15px;
-    background: #64FFDA;
-    color: #0A192F;
-    border: none;
+/* Navbardagi Qabul Tugmasi */
+.nav-btn {
+    background: transparent;
+    color: #64FFDA;
+    border: 1px solid #64FFDA;
+    padding: 10px 22px;
     border-radius: 8px;
-    font-size: 1rem;
+    text-decoration: none;
+    font-size: 0.95rem;
     font-weight: 600;
-    cursor: pointer;
     transition: all 0.3s ease;
 }
 
-form button:hover {
-    background: #00AEEF; /* Ko'k rangga o'zgaradi */
-    color: #FFFFFF;
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0, 174, 239, 0.4);
+.nav-btn:hover {
+    background: rgba(100, 255, 218, 0.1);
+    box-shadow: 0 0 15px rgba(100, 255, 218, 0.2);
+    transform: translateY(-2px);
 }
 
-/* 5. Mobil Qurilmalar uchun Moslashuvchanlik (Responsive) */
+/* Mobil qurilmalar uchun moslashuvchanlik */
 @media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2.2rem;
+    .nav-links {
+        display: none; /* Mobil telefonda menyuni berkitib turadi */
     }
-    .hero p {
-        font-size: 1rem;
-    }
-    form {
-        padding: 25px;
+    nav {
+        padding: 15px 5%;
     }
 }
-    
