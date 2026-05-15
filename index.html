@@ -8,20 +8,20 @@
 </head>
 <body>
 
-    <!-- Fon effektlari (Navbardan tashqarida bo'lishi shart) -->
+    <!-- Fon effektlari -->
     <div class="bg-grid"></div>
-    <div class="cursor-glow"></div>
     <div class="glow-orb orb-1"></div>
     <div class="glow-orb orb-2"></div>
+    <div class="cursor-glow"></div>
 
     <!-- Navigatsiya (Navbar) -->
     <nav>
-        <div class="logo">UR<span>TT</span></div>
+        <div class="logo"><a href="index.html" style="color:white; text-decoration:none;">UR<span>TT</span></a></div>
         <ul class="nav-links">
-    <li><a href="index.html">Bosh sahifa</a></li>
-    <li><a href="#programs">Yo'nalishlar</a></li>
-    <li><a href="galereya.html">Galereya</a></li>
-    <li><a href="yangiliklar.html">Yangiliklar</a></li>
+            <li><a href="index.html" style="color: #64FFDA;">Bosh sahifa</a></li>
+            <li><a href="dasturlash.html">Yo'nalishlar</a></li>
+            <li><a href="galereya.html">Galereya</a></li>
+            <li><a href="yangiliklar.html">Yangiliklar</a></li>
         </ul>
         <a href="#contact" class="nav-btn">Qabul 2026</a>
     </nav>
@@ -33,39 +33,47 @@
         <a href="#contact" class="cta-main">Hoziroq ariza topshirish</a>
     </section>
 
-    <!-- O'quv yo'nalishlari (Bento Grid bilan haqiqiy rasmlar) -->
-           <!-- 1-karta: Dasturlash (web.jpg ishlatamiz) -->
-        <div class="bento-card large">
-            <div class="card-img-box">
-                <img src="images/web.jpg" alt="Dasturlash">
+    <!-- O'quv yo'nalishlari (Bento Grid - Rasmlar to'g'rilangan) -->
+    <section class="programs-section" id="programs">
+        <h2 class="section-title">Bizning Yo'nalishlarimiz</h2>
+        <div class="bento-grid">
+            <div class="bento-card large">
+                <div class="card-img-box">
+                    <img src="images/web.jpg" alt="Dasturlash">
+                </div>
+                <div class="card-icon">💻</div>
+                <h3>Dasturlash muhandisligi</h3>
+                <p>Python, JavaScript, Django va React texnologiyalari asosida dasturiy ta'minotlarni noldan yaratish tizimi.</p>
+                <span class="card-tag">Top yo'nalish</span>
+                <a href="dasturlash.html" class="read-more">Batafsil ma'lumot →</a>
             </div>
-            <div class="card-icon">💻</div>
-            <h3>Dasturlash muhandisligi</h3>
-            ...
-        </div>
-
-        <!-- 2-karta: Web (web development.jpeg ishlatamiz) -->
-        <div class="bento-card">
-            <div class="card-img-box">
-                <!-- Diqqat: Bo'shliq (probel) borligi uchun nomini aniq yozing -->
-                <img src="images/web development.jpeg" alt="Web">
+            
+            <div class="bento-card">
+                <div class="card-img-box">
+                    <img src="images/web development.jpeg" alt="Web">
+                </div>
+                <div class="card-icon">🌐</div>
+                <h3>Veb-texnologiyalar</h3>
+                <p>Zamonaviy, tezkor va interaktiv veb-saytlar hamda murakkab web-ilovalarni dasturlash.</p>
             </div>
-            <div class="card-icon">🌐</div>
-            <h3>Veb-texnologiyalar</h3>
-            ...
-        </div>
-
-        <!-- 3-karta: Grafika (design.avif ishlatamiz) -->
-        <div class="bento-card">
-            <div class="card-img-box">
-                <!-- Diqqat: Formati .avif -->
-                <img src="images/design.avif" alt="Dizayn">
+            
+            <div class="bento-card">
+                <div class="card-img-box">
+                    <img src="images/design.avif" alt="Dizayn">
+                </div>
+                <div class="card-icon">🎨</div>
+                <h3>Kompyuter grafikasi</h3>
+                <p>UI/UX dizayn, 3D modellashtirish, brending va raqamli vizual san'at loyihalarini tayyorlash sirlari.</p>
             </div>
-            <div class="card-icon">🎨</div>
-            <h3>Kompyuter grafikasi</h3>
-            ...
+            
+            <div class="bento-card wide">
+                <div class="card-icon">🛡️</div>
+                <h3>Kiberxavfsizlik va Tarmoqlar</h3>
+                <p>Tizimlarni kiberhujumlardan himoya qilish, xavfsizlik protokollari va Linux server boshqaruvini mukammal o'rganish.</p>
+                <span class="card-tag">Yangi</span>
+            </div>
         </div>
-
+    </section>
 
     <!-- Yangiliklar va Tadbirlar bo'limi -->
     <section class="news-section" id="news">
