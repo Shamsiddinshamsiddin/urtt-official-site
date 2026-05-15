@@ -18,10 +18,10 @@
     <nav>
         <div class="logo">UR<span>TT</span></div>
         <ul class="nav-links">
-            <li><a href="#home">Bosh sahifa</a></li>
-            <li><a href="#programs">Yo'nalishlar</a></li>
-            <li><a href="#news">Yangiliklar</a></li>
-            <li><a href="#contact">Aloqa</a></li>
+    <li><a href="index.html">Bosh sahifa</a></li>
+    <li><a href="#programs">Yo'nalishlar</a></li>
+    <li><a href="galereya.html">Galereya</a></li>
+    <li><a href="yangiliklar.html">Yangiliklar</a></li>
         </ul>
         <a href="#contact" class="nav-btn">Qabul 2026</a>
     </nav>
@@ -35,32 +35,38 @@
 
     <!-- O'quv yo'nalishlari (Bento Grid) -->
     <section class="programs-section" id="programs">
-        <h2 class="section-title">Bizning Yo'nalishlarimiz</h2>
-        <div class="bento-grid">
-            <div class="bento-card large">
-                <div class="card-icon">💻</div>
-                <h3>Dasturlash muhandisligi</h3>
-                <p>Python, JavaScript, ma'lumotlar bazasi va yirik dasturiy ta'minotlarni noldan mukammal yaratish tizimi.</p>
-                <span class="card-tag">Top yo'nalish</span>
+    <h2 class="section-title">Bizning Yo'nalishlarimiz</h2>
+    <div class="bento-grid">
+        <!-- 1-karta: Dasturlash -->
+        <div class="bento-card large">
+            <div class="card-img-box">
+                <img src="https://unsplash.com" alt="Dasturlash">
             </div>
-            <div class="bento-card">
-                <div class="card-icon">🌐</div>
-                <h3>Veb-texnologiyalar</h3>
-                <p>Zamonaviy, tezkor va interaktiv veb-saytlar hamda murakkab web-ilovalarni mukammal darajada dasturlash.</p>
-            </div>
-            <div class="bento-card">
-                <div class="card-icon">🎨</div>
-                <h3>Kompyuter grafikasi</h3>
-                <p>UI/UX dizayn, 3D modellashtirish, brending va raqamli vizual san'at loyihalarini tayyorlash sirlari.</p>
-            </div>
-            <div class="bento-card wide">
-                <div class="card-icon">🛡️</div>
-                <h3>Kiberxavfsizlik va Tarmoqlar</h3>
-                <p>Tizimlarni kiberhujumlardan himoya qilish, xavfsizlik protokollari va server boshqvuvini o'rganish.</p>
-                <span class="card-tag">Yangi</span>
-            </div>
+            <h3>Dasturlash muhandisligi</h3>
+            <p>2 yillik chuqurlashtirilgan o'quv dasturi. Python, JavaScript, Django va React texnologiyalari. Kunduzgi va sirtqi ta'lim shakllari mavjud.</p>
+            <a href="dasturlash.html" class="read-more">Batafsil ma'lumot →</a>
         </div>
-    </section>
+
+        <!-- 2-karta: Web -->
+        <div class="bento-card">
+            <div class="card-img-box">
+                <img src="https://unsplash.com" alt="Web">
+            </div>
+            <h3>Veb-texnologiyalar</h3>
+            <p>Frontend va Backend yo'nalishlari. Zamonaviy frameworklar va amaliy loyihalar.</p>
+        </div>
+
+        <!-- 3-karta: Grafika -->
+        <div class="bento-card">
+            <div class="card-img-box">
+                <img src="https://unsplash.com" alt="Dizayn">
+            </div>
+            <h3>Kompyuter grafikasi</h3>
+            <p>UI/UX dizayn, Figma, Photoshop va 3D blender dasturlari ustida ishlash.</p>
+        </div>
+    </div>
+</section>
+
 
     <!-- Yangiliklar va Tadbirlar bo'limi -->
     <section class="news-section" id="news">
