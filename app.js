@@ -1,21 +1,44 @@
 // 1. Scroll Animatsiyasi (Reveal on Scroll)
 const reveals = document.querySelectorAll('.bento-card, .news-card, form');
 
-function revealOnScroll() {
-    reveals.forEach(element => {
-        element.classList.add('reveal');
-        const windowHeight = window.innerHeight;
-        const elementTop = element.getBoundingClientRect().top;
-        const elementVisible = 100;
+// 1. Yangiliklar va Aloqa qismi uchun mukammal Scroll Animatsiyasi
+function initScrollAnimations() {
+    const newsCards = document.querySelectorAll('.news-card');
+    const contactForm = document.querySelector('form');
 
-        if (elementTop < windowHeight - elementVisible) {
-            element.classList.add('active');
+    // Elementlarga boshlang'ich animatsiya klasslarini qo'shish
+    newsCards.forEach(card => card.classList.add('news-card-reveal'));
+    if(contactForm) contactForm.classList.add('form-reveal');
+
+    function checkVisibility() {
+        const windowHeight = window.innerHeight;
+
+        // Yangiliklar kartalarini navbatma-navbat (Staggered) ochish
+        newsCards.forEach((card, index) => {
+            const cardTop = card.getBoundingClientRect().top;
+            if (cardTop < windowHeight - 50) {
+                // Har bir keyingi karta 150ms kechikish bilan chiqadi
+                setTimeout(() => {
+                    card.classList.add('active');
+                }, index * 150); 
+            }
+        });
+
+        // Aloqa formasini o'ngdan silliq chiqarish
+        if (contactForm) {
+            const formTop = contactForm.getBoundingClientRect().top;
+            if (formTop < windowHeight - 100) {
+                contactForm.classList.add('active');
+            }
         }
-    });
+    }
+
+    window.addEventListener('scroll', checkVisibility);
+    window.addEventListener('load', checkVisibility);
 }
 
-window.addEventListener('scroll', revealOnScroll);
-window.addEventListener('load', revealOnScroll);
+// Funksiyani ishga tushiramiz
+initScrollAnimations();
 
 // 2. Telegram Formani xatosiz boshqarish
 document.getElementById('telegram-form').addEventListener('submit', function(e) {

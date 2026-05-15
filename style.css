@@ -113,9 +113,45 @@ form input:focus { outline: none; border-color: #64FFDA; }
 form button { width: 100%; padding: 15px; background: #64FFDA; color: #0A192F; border: none; border-radius: 8px; font-size: 1rem; font-weight: 600; cursor: pointer; transition: 0.3s; }
 form button:hover { background: #00AEEF; color: #FFFFFF; }
 
-/* Reveal Animation Class */
-.reveal { opacity: 0; transform: translateY(40px); transition: all 0.8s ease-out; }
-.reveal.active { opacity: 1; transform: translateY(0); }
+/* Yangiliklar va Forma uchun maxsus tayyorgarlik holati */
+.news-card-reveal {
+    opacity: 0;
+    transform: translateY(50px) scale(0.95);
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.form-reveal {
+    opacity: 0;
+    transform: translateX(60px);
+    transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+/* Aktivlashgandagi holat (Scroll qilganda ishlaydi) */
+.news-card-reveal.active {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.form-reveal.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Yangiliklar kartalari ustiga sichqoncha kelganda neon chiziq effekti */
+.news-card {
+    position: relative;
+    overflow: hidden;
+    background: rgba(17, 34, 64, 0.4);
+    border: 1px solid rgba(100, 255, 218, 0.05);
+    transition: all 0.3s ease;
+}
+
+.news-card:hover {
+    border-color: #64FFDA;
+    box-shadow: 0 10px 25px rgba(100, 255, 218, 0.05);
+    transform: translateY(-5px);
+}
+
 
 footer { text-align: center; padding: 40px 20px; border-top: 1px solid rgba(100, 255, 218, 0.05); color: #8892B0; }
 @media (max-width: 968px) { .bento-grid { grid-template-columns: 1fr; } .bento-card.large, .bento-card.wide { grid-row: auto; grid-column: auto; } .hero h1 { font-size: 2.3rem; } .nav-links { display: none; } }
