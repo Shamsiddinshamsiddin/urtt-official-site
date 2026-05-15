@@ -119,3 +119,52 @@ form button:hover { background: #00AEEF; color: #FFFFFF; }
 
 footer { text-align: center; padding: 40px 20px; border-top: 1px solid rgba(100, 255, 218, 0.05); color: #8892B0; }
 @media (max-width: 968px) { .bento-grid { grid-template-columns: 1fr; } .bento-card.large, .bento-card.wide { grid-row: auto; grid-column: auto; } .hero h1 { font-size: 2.3rem; } .nav-links { display: none; } }
+/* 8. Premium Interaktiv Effektlar */
+.cursor-glow {
+    position: fixed;
+    top: 0; left: 0;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(100, 255, 218, 0.04) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    transition: transform 0.1s ease-out;
+}
+
+/* Kartalarga 3D chuqurlik berish */
+.bento-card {
+    background: linear-gradient(135deg, rgba(17, 34, 64, 0.4) 0%, rgba(10, 25, 47, 0.6) 100%);
+    border: 1px solid rgba(100, 255, 218, 0.08);
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.bento-card:hover {
+    border-color: rgba(100, 255, 218, 0.4);
+    box-shadow: 0 20px 40px rgba(100, 255, 218, 0.05), inset 0 0 15px rgba(100, 255, 218, 0.05);
+}
+
+.bento-card * {
+    transform: translateZ(20px); /* Elementlarni kartadan bo'rtib chiqishi */
+}
+
+/* Tugmalarga Premium Effekt */
+.cta-main, .nav-btn, form button {
+    position: relative;
+    overflow: hidden;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 20px rgba(100, 255, 218, 0.1);
+}
+
+.cta-main::before, form button::before {
+    content: '';
+    position: absolute;
+    top: 0; left: -100%; width: 100%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: 0.5s;
+}
+
+.cta-main:hover::before, form button:hover::before {
+    left: 100%;
+}

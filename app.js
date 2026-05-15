@@ -64,3 +64,28 @@ document.getElementById('telegram-form').addEventListener('submit', function(e) 
         btn.disabled = false;
     });
 });
+// 3. Sichqonchaga ergashuvchi nur effekti (Mouse Tracker)
+const glow = document.querySelector('.cursor-glow');
+
+window.addEventListener('mousemove', (e) => {
+    glow.style.left = e.clientX + 'px';
+    glow.style.top = e.clientY + 'px';
+});
+
+// 4. Bento-kartalarning sichqoncha harakatiga qarab egilishi (Tilt Effect)
+const cards = document.querySelectorAll('.bento-card');
+
+cards.forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left - rect.width/2;
+        const y = e.clientY - rect.top - rect.height/2;
+        
+        // Egilish darajasini hisoblash
+        card.style.transform = `perspective(1000px) rotateX(${-y / 15}deg) rotateY(${x / 15}deg) translateY(-5px)`;
+    });
+    
+    card.addEventListener('mouseleave', () => {
+        card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0)';
+    });
+});
